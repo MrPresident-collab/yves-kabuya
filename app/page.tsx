@@ -106,7 +106,7 @@ const testimonials = [
     location: "Kinshasa",
     photo: "/thereza.jpg",
     featured: true,
-    text: "Hello. From the very first day of class, he inspired a desire in us to learn and improve our English. His unique teaching style, energy, and professionalism make him an outstanding teacher. His sociable nature makes me look forward to attending class; beyond just the learning itself, he creates a warm and friendly atmosphere.",
+    text: "From the very first day of class, he inspired a desire in us to learn and improve our English. His unique teaching style, energy, and professionalism make him an outstanding teacher. His sociable nature makes me look forward to attending class; beyond just the learning itself, he creates a warm and friendly atmosphere.",
   },
   {
     name: "Ruzzdy",
@@ -584,7 +584,7 @@ export default function Home() {
             href="#accueil"
             className="font-serif text-2xl font-medium tracking-tight"
           >
-            Yves<span className="text-blue-700">.</span>
+            Yves<span className="text-blue-700">.</span>Kabuya
           </a>
 
           <div className="hidden items-center gap-7 text-sm font-medium text-slate-600 lg:flex">
@@ -802,7 +802,7 @@ export default function Home() {
                 ["RSA", "élèves privés"],
               ].map(([number, label]) => (
                 <div
-                  key={label}
+                  key={number}
                   className="border-b border-slate-200 py-6 sm:border-b-0 sm:border-r sm:px-5 first:pl-0 last:border-r-0"
                 >
                   <p className="font-serif text-3xl">{number}</p>
@@ -1083,8 +1083,7 @@ export default function Home() {
               </div>
 
               <blockquote className="relative mt-10 max-w-2xl font-serif text-2xl leading-relaxed sm:text-3xl">
-                “From the very first day of class, he inspired a desire in us
-                to learn and improve our English.”
+                “Hello Mr Yves.”
               </blockquote>
 
               <p className="relative mt-6 max-w-2xl leading-7 text-blue-50/75">
@@ -1232,7 +1231,7 @@ export default function Home() {
           <div className="grid gap-10 md:grid-cols-3">
             <div>
               <p className="font-serif text-2xl">
-                Yves<span className="text-blue-700">.</span>
+                Yves<span className="text-blue-700">.</span>Kabuya
               </p>
 
               <p className="mt-3 max-w-xs text-sm leading-6 text-slate-500">
