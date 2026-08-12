@@ -5,17 +5,28 @@ import "./globals.css";
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "Yves Kabuya | Professeur d'anglais à Kinshasa",
   description:
-    "Cours d'anglais personnalisés avec Yves Kabuya à Kinshasa et en ligne. Plus de 5 ans d'expérience dans l'enseignement et une approche pratique basée sur la communication.",
+    "Yves Kabuya, professeur d'anglais à Kinshasa. Cours d'anglais général, conversationnel et professionnel, en présentiel et en ligne.",
+  keywords: [
+    "Yves Kabuya",
+    "professeur d'anglais",
+    "cours d'anglais Kinshasa",
+    "English teacher Kinshasa",
+    "cours d'anglais en ligne",
+  ],
+  authors: [{ name: "Yves Kabuya" }],
+  creator: "Yves Kabuya",
 };
 
 export default function RootLayout({
@@ -24,8 +35,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${dmSans.variable} ${playfair.variable}`}>
-      <body>{children}</body>
+    <html
+      lang="fr"
+      className={`${dmSans.variable} ${playfair.variable}`}
+    >
+      <body className="font-sans antialiased">
+        {children}
+      </body>
     </html>
   );
 }

@@ -732,16 +732,8 @@ export default function Home() {
             </div>
 
             <div className="absolute -bottom-7 -left-5 max-w-[250px] rounded-2xl bg-white p-5 shadow-xl ring-1 ring-slate-100 sm:-left-8">
-              <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-slate-400">
-                Depuis 2024
-              </p>
-
-              <p className="mt-2 font-semibold text-slate-900">
-                English Speaking Support
-              </p>
-
-              <p className="mt-1 text-sm leading-5 text-slate-500">
-                CALI — Congo American Language Institute
+              <p className="font-serif text-lg italic leading-7 text-slate-800">
+                “Learn with purpose. Speak with confidence.”
               </p>
             </div>
           </div>
@@ -786,7 +778,16 @@ export default function Home() {
                 English Speaking Support au CALI — Congo American Language
                 Institute
               </strong>
-              , où il accompagne des étudiants de différents niveaux.
+              , où il accompagne des étudiants de différents niveaux. Il intervient
+              également comme professeur d&apos;anglais à{" "}
+              <strong className="font-semibold text-slate-900">
+                Source de Vie, Gombe
+              </strong>{" "}
+              et à{" "}
+              <strong className="font-semibold text-slate-900">
+                Saint Pie X, Ngiringiri
+              </strong>
+              .
             </p>
 
             <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
@@ -944,39 +945,67 @@ export default function Home() {
 
       <section className="bg-[#132f50] px-6 py-24 text-white lg:px-8 lg:py-28">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-12 lg:grid-cols-[1fr_auto] lg:items-end">
-            <div>
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-blue-200">
-                Parcours
-              </p>
+         <div className="max-w-3xl">
+          <p className="text-sm font-bold uppercase tracking-[0.18em] text-blue-200">
+           Parcours
+          </p>
 
-              <h2 className="mt-5 max-w-3xl font-serif text-4xl leading-tight sm:text-5xl">
-                De l&apos;Afrique du Sud à Kinshasa.
-              </h2>
+          <h2 className="mt-5 font-serif text-4xl leading-tight sm:text-5xl">
+            Une expérience construite entre formation internationale et enseignement à Kinshasa.
+          </h2>
 
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-blue-50/75">
-                Une immersion dans un environnement anglophone combinée à
-                plusieurs années d&apos;enseignement et d&apos;accompagnement
-                d&apos;apprenants.
-              </p>
-            </div>
-
-            <div className="rounded-3xl border border-white/15 bg-white/10 p-7 backdrop-blur-sm">
-              <p className="text-sm font-medium text-blue-200">
-                English Speaking Support
-              </p>
-
-              <p className="mt-2 text-xl font-semibold">
-                CALI — Congo American Language Institute
-              </p>
-
-              <p className="mt-2 text-sm text-blue-100/65">
-                Depuis 2024 · Kinshasa
-              </p>
-            </div>
-          </div>
+          <p className="mt-6 text-lg leading-8 text-blue-50/75">
+            Une immersion dans un environnement anglophone combinée à plusieurs
+            années d&apos;enseignement auprès d&apos;apprenants de différents
+            profils et niveaux.
+          </p>
         </div>
-      </section>
+
+        <div className="mt-14 grid gap-5 md:grid-cols-3">
+          <article className="rounded-3xl border border-white/15 bg-white/10 p-7 backdrop-blur-sm">
+            <p className="text-sm font-medium text-blue-200">
+              English Speaking Support
+            </p>
+
+            <h3 className="mt-3 text-xl font-semibold">
+              CALI — Congo American Language Institute
+            </h3>
+
+            <p className="mt-3 text-sm text-blue-100/65">
+              Depuis 2024 · Kinshasa
+            </p>
+          </article>
+
+          <article className="rounded-3xl border border-white/15 bg-white/10 p-7 backdrop-blur-sm">
+            <p className="text-sm font-medium text-blue-200">
+              Professeur d&apos;anglais
+           </p>
+
+           <h3 className="mt-3 text-xl font-semibold">
+             Source de Vie
+           </h3>
+
+           <p className="mt-3 text-sm text-blue-100/65">
+             Gombe · Kinshasa
+           </p>
+        </article>
+
+        <article className="rounded-3xl border border-white/15 bg-white/10 p-7 backdrop-blur-sm">
+          <p className="text-sm font-medium text-blue-200">
+            Professeur d&apos;anglais
+          </p>
+
+          <h3 className="mt-3 text-xl font-semibold">
+            Saint Pie X
+          </h3>
+
+          <p className="mt-3 text-sm text-blue-100/65">
+            Ngiringiri · Kinshasa
+          </p>
+        </article>
+       </div>
+      </div>
+    </section>
 
       {/* =====================================================
           QUIZ INTRO
@@ -1067,6 +1096,7 @@ export default function Home() {
                     src="/Thereza.jpg"
                     alt="Mandemvo Malila Thereza"
                     fill
+                    sizes="96px"
                     className="object-cover"
                   />
                 </div>
@@ -1105,6 +1135,7 @@ export default function Home() {
                           src={testimonial.photo}
                           alt={testimonial.name}
                           fill
+                          sizes="48px"
                           className="object-cover"
                         />
                       </div>
@@ -1308,6 +1339,18 @@ export default function Home() {
           <div className="mt-12 border-t border-slate-200 pt-6">
             <p className="text-xs text-slate-400">
               © 2026 Yves Kabuya. Tous droits réservés.
+            </p>
+
+            <p className="mt-2 text-xs text-slate-400">
+              Site web conçu & développé par{" "}
+              <a
+                href="https://www.facebook.com/voldino.billy.paulo.lusikila/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-slate-500 transition hover:text-blue-700"
+              >
+                Voldi Bill Paulo Lusikila
+              </a>
             </p>
           </div>
         </div>
