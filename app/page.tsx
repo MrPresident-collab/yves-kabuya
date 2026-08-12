@@ -489,7 +489,7 @@ export default function Home() {
       window.localStorage.getItem("yves-english-quiz-attempts") || "0",
     );
 
-    setAttempts(Math.min(savedAttempts, 2));
+    setAttempts(Math.min(savedAttempts, 3));
   }, []);
 
   useEffect(() => {
@@ -515,7 +515,7 @@ export default function Home() {
   }, [currentQuestion, quizQuestionsForAttempt.length]);
 
   const startQuiz = () => {
-    if (attempts >= 2) return;
+    if (attempts >= 3) return;
 
     const selectedQuestions = shuffle(quizQuestions).slice(0, 12);
 
@@ -1038,7 +1038,7 @@ export default function Home() {
               <span>•</span>
               <span>30 questions disponibles</span>
               <span>•</span>
-              <span>2 tentatives maximum</span>
+              <span>3 tentatives maximum</span>
             </div>
           </div>
 
@@ -1423,12 +1423,12 @@ export default function Home() {
                   </p>
 
                   <h2 className="mt-4 font-serif text-4xl leading-tight text-slate-900">
-                    Découvrez votre niveau d&apos;anglais.
+                    Évaluez votre anglais gratuitement.
                   </h2>
 
                   <p className="mx-auto mt-5 max-w-xl leading-7 text-slate-600">
-                    12 questions différentes à chaque tentative, sélectionnées
-                    parmi une banque de 30 questions.
+                    Vérifiez votre niveau d&apos;anglais. Gratuit et rapide.
+                    Faites un test court pour connaître votre niveau et découvrir vos options d’apprentissage.
                   </p>
 
                   <div className="mx-auto mt-8 grid max-w-md grid-cols-3 divide-x rounded-2xl border border-slate-200 py-4">
@@ -1448,7 +1448,7 @@ export default function Home() {
 
                     <div>
                       <p className="font-semibold text-slate-900">
-                        {2 - attempts}
+                        {3 - attempts}
                       </p>
                       <p className="mt-1 text-xs text-slate-500">
                         tentative(s)
@@ -1456,9 +1456,9 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {attempts >= 2 ? (
+                  {attempts >= 3 ? (
                     <div className="mx-auto mt-8 max-w-md rounded-2xl bg-slate-50 p-5 text-sm leading-6 text-slate-600">
-                      Vous avez déjà utilisé vos deux tentatives. Le test
+                      Vous avez déjà utilisé vos trois tentatives. Le test
                       n&apos;est plus disponible sur cet appareil.
                     </div>
                   ) : (
@@ -1489,7 +1489,7 @@ export default function Home() {
                       </span>
 
                       <span className="text-slate-400">
-                        Tentative {attempts + 1} / 2
+                        Tentative {attempts + 1} / 3
                       </span>
                     </div>
 
@@ -1587,29 +1587,104 @@ export default function Home() {
                   )}
 
                   <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-                    <button
-                      type="button"
-                      onClick={closeQuiz}
+                    <a
+                      href={`https://wa.me/243891369069?text=${encodeURIComponent(
+                        `Bonjour Yves ! Je viens de faire votre test d'anglais et j'ai obtenu le niveau ${resultLevel} (${score}/12). J'aimerais en savoir plus sur vos cours.`
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 rounded-full bg-[#173f72] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#102f56]"
                     >
-                      Retour au site
+                      Parler avec Yves
                       <ArrowRight size={16} />
-                    </button>
+                    </a>
 
-                    {attempts < 2 && (
+                    <div className="mt-9">
+                      <p className="text-sm font-semibold text-slate-900">
+                        Partagez votre résultat
+                      </p>
+
+                      <p className="mx-auto mt-2 max-w-md text-sm leading-6 text-slate-500">
+                        Vous connaissez votre niveau. Maintenant, faites-le savoir à vos amis.
+                      </p>
+
+                      <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+                        <a
+                          href={`https://wa.me/?text=${encodeURIComponent(
+                             `🎯 Je viens de tester mon niveau d'anglais avec Yves Kabuya !\n🇬🇧 Mon niveau : ${resultLevel}\n\nTestez gratuitement votre niveau 👇\nYves-Kabuya`
+                          )}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-sm font-semibold text-white transition hover:brightness-95"
+                        >
+                          WhatsApp
+                        </a>
+                         
+                        <a
+                          href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+                            "https://yves-kabuya.vercel.app/"
+                          )}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 rounded-full bg-[#1877F2] px-5 py-3 text-sm font-semibold text-white transition hover:brightness-95"
+                        >
+                          Facebook
+                        </a>
+                         
+                        <button
+                          type="button"
+                          onClick={async () => {
+                            const text = `🎯 Je viens de tester mon niveau d'anglais avec Yves Kabuya !\n🇬🇧 Mon niveau : ${resultLevel}\n\nTestez gratuitement votre niveau 👇\nYves-Kabuya`;
+
+                            try {
+                              await navigator.clipboard.writeText(text);
+                              alert("Résultat copié ! Vous pouvez maintenant le partager sur Instagram." );
+                            } catch {
+                              alert("Copiez votre résultat et partagez-le sur Instagram.");
+                            }
+                          }}
+                          className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 px-5 py-3 text-sm font-semibold text-white transition hover:brightness-95" 
+                        >
+                          Instagram
+                        </button>
+
+                        <button
+                          type="button"
+                          onClick={async () => {
+                            const text = `🎯 Je viens de tester mon niveau d'anglais avec Yves Kabuya !\n🇬🇧 Mon niveau : ${resultLevel}\n\nTestez gratuitement votre niveau 👇\nYves-Kabuya`;
+
+                            try {
+                              await navigator.clipboard.writeText(text);
+                              alert("Résultat copié ! Vous pouvez maintenant le partager sur TikTok." );
+                            } catch {
+                              alert("Copiez votre résultat et partagez-le sur TikTok.");
+                            }
+                          }}
+                          className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 px-5 py-3 text-sm font-semibold text-white transition hover:brightness-95" 
+                        >
+                          TikTok
+                        </button>
+
+                      </div>
+
+
+                    </div>
+                    
+
+                    {attempts < 3 && (
                       <button
                         type="button"
                         onClick={resetQuizForSecondAttempt}
                         className="rounded-full border border-slate-200 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
                       >
-                        Dernière tentative
+                        Nouvelle tentative
                       </button>
                     )}
                   </div>
 
                   {attempts >= 2 && (
                     <p className="mt-5 text-xs text-slate-400">
-                      Vous avez utilisé vos deux tentatives.
+                      Vous avez utilisé vos trois tentatives.
                     </p>
                   )}
                 </div>
