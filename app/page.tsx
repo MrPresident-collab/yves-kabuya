@@ -18,6 +18,8 @@ import {
   Star,
   Users,
   X,
+  ShieldCheck,
+  Scale,
 } from "lucide-react";
 
 /* =========================================================
@@ -1336,10 +1338,30 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-12 border-t border-slate-200 pt-6">
+          <div className="mt-12 flex flex-col gap-3 border-t border-slate-200 pt-6 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-xs text-slate-400">
               © 2026 Yves Kabuya. Tous droits réservés.
             </p>
+
+            <a
+              href="/politique-de-confidential"
+            className="group inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white/70 px-3 py-2 text-xs font-medium text-slate-500 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-200 hover:bg-white hover:text-blue-700 hover:shadow-md"
+            >
+              <span className="flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 text-slate-500 transition-colors group-hover:bg-blue-50 group-hover:text-blue-700">
+                <ShieldCheck size={13} />
+              </span>
+              <span>Politique de confidentialité</span>
+            </a>
+
+            <a
+             href="/mentions-legales"
+              className="group inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white/70 px-3 py-2 text-xs font-medium text-slate-500 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-200 hover:bg-white hover:text-blue-700 hover:shadow-md"
+              >
+              <span className="flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 text-slate-500 transition-colors group-hover:bg-blue-50 group-hover:text-blue-700">
+                <Scale size={13} />
+              </span>
+              <span>Mentions légales</span>
+            </a>
 
             <p className="mt-2 text-xs text-slate-400">
               Site web conçu & développé par{" "}
