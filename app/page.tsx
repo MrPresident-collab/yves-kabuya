@@ -104,7 +104,7 @@ const testimonials = [
   {
     name: "Mandemvo Malila Thereza",
     location: "Kinshasa",
-    photo: "/thereza.jpg",
+    photo: "/Thereza.jpg",
     featured: true,
     text: "From the very first day of class, he inspired a desire in us to learn and improve our English. His unique teaching style, energy, and professionalism make him an outstanding teacher. His sociable nature makes me look forward to attending class; beyond just the learning itself, he creates a warm and friendly atmosphere.",
   },
@@ -118,14 +118,14 @@ const testimonials = [
   {
     name: "Jordy ABERI Muyila",
     location: "Kinshasa",
-    photo: "/jordy.jpg",
+    photo: "/Jordy.jpg",
     featured: false,
     text: "Mr. Yve Kabuya has greatly contributed to improving my English pronunciation through his clear guidance and active participation in class. I appreciate his professional attitude and effective teaching methods, especially his approach to developing our debating skills. He also encourages us to practice using tools like the Pépé application, which supports our progress. His humorous way of teaching, along with making us sing at the end of lessons, creates a positive and enjoyable learning environment.",
   },
   {
     name: "Jiress Mambimbi",
     location: "Kinshasa",
-    photo: "/jiress.jpg",
+    photo: "/Jiress.jpg",
     featured: false,
     text: "This training is an amazing experience for me. I’m learning new things, improving my English, and becoming more confident every day. My teacher YVES KABUYA is very dedicated and always motivates us to keep improving. I truly appreciate the effort and passion put into this training. I highly recommend it to anyone who wants to improve your English.",
   },
@@ -1064,7 +1064,7 @@ export default function Home() {
               <div className="relative flex flex-col sm:flex-row sm:items-start sm:gap-7">
                 <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-2xl bg-slate-200">
                   <Image
-                    src="/thereza.jpg"
+                    src="/Thereza.jpg"
                     alt="Mandemvo Malila Thereza"
                     fill
                     className="object-cover"
