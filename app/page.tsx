@@ -1347,7 +1347,7 @@ export default function Home() {
                 href="https://www.facebook.com/voldino.billy.paulo.lusikila/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-slate-500 transition hover:text-blue-700"
+                className="font-medium text-slate-500 transition-colors duration-150 hover:text-blue-700"
               >
                 Voldi Bill Paulo Lusikila
               </a>
@@ -1365,7 +1365,7 @@ export default function Home() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contacter Yves sur WhatsApp"
-        className="group fixed bottom-6 right-6 z-40 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl shadow-green-500/30 ring-4 ring-white transition duration-300 hover:scale-105"
+        className="group fixed bottom-6 right-6 z-40 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl shadow-green-500/30 ring-4 ring-white transition-transform duration-200 hover:scale-105"
       >
         <MessageCircle size={29} fill="currentColor" />
 
