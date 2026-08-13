@@ -22,6 +22,8 @@ import {
   Scale,
 } from "lucide-react";
 
+const WEBSITE_URL = "https://yves-kabuya.vercel.app/";
+
 /* =========================================================
    CONTACT
    ========================================================= */
@@ -1611,7 +1613,13 @@ export default function Home() {
                       <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
                         <a
                           href={`https://wa.me/?text=${encodeURIComponent(
-                             `🎯 Je viens de tester mon niveau d'anglais avec Yves Kabuya !\n🇬🇧 Mon niveau : ${resultLevel}\n\nTestez gratuitement votre niveau 👇\nYves-Kabuya`
+                             `🎯 J'ai testé mon niveau d'anglais !\n🇬🇧 Résultat : ${resultLevel}
+
+                             Je l'ai fait avec Yves Kabuya, professeur d'anglais à Kinshasa.
+
+                             Vous pensez pouvoir faire mieux ? 😏
+                             Testez gratuitement votre niveau 👇
+                             ${WEBSITE_URL}`
                           )}`}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -1622,7 +1630,7 @@ export default function Home() {
                          
                         <a
                           href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-                            "https://yves-kabuya.vercel.app/"
+                            WEBSITE_URL
                           )}`}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -1682,7 +1690,7 @@ export default function Home() {
                     )}
                   </div>
 
-                  {attempts >= 2 && (
+                  {attempts >= 3 && (
                     <p className="mt-5 text-xs text-slate-400">
                       Vous avez utilisé vos trois tentatives.
                     </p>

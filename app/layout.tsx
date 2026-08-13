@@ -27,6 +27,24 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Yves Kabuya" }],
   creator: "Yves Kabuya",
+
+  openGraph: {
+    title: "Yves Kabuya | Professeur d'anglais à Kinshasa",
+    description:
+      "Améliorez votre anglais avec Yves Kabuya. Cours pratiques, conversationnels et professionnels à Kinshasa et en ligne.",
+    url: "https://yves-kabuya.vercel.app/",
+    siteName: "Yves Kabuya",
+    locale: "fr_CD",
+    type: "website",
+    images: [
+      {
+        url: "https://yves-kabuya.vercel.app/yves-kabuya.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Yves Kabuya — Professeur d'anglais à Kinshasa",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
