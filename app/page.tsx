@@ -1638,40 +1638,27 @@ export default function Home() {
                         >
                           Facebook
                         </a>
-                         
-                        <button
-                          type="button"
-                          onClick={async () => {
-                            const text = `🎯 Je viens de tester mon niveau d'anglais avec Yves Kabuya !\n🇬🇧 Mon niveau : ${resultLevel}\n\nTestez gratuitement votre niveau 👇\nYves-Kabuya`;
+                         <button
+                           type="button"
+                           onClick={async () => {
+                            const text = `🎯 Je viens de tester mon niveau d'anglais avec Yves Kabuya !
+                          🇬🇧 Résultat : ${resultLevel}
 
+                          Vous pensez pouvoir faire mieux ? 😏
+                          Testez gratuitement votre niveau 👇
+
+                          ${WEBSITE_URL}`;
                             try {
                               await navigator.clipboard.writeText(text);
-                              alert("Résultat copié ! Vous pouvez maintenant le partager sur Instagram." );
+                              alert("Résultat copié ! Vous pouvez maintenant le partager où vous voulez.");
                             } catch {
-                              alert("Copiez votre résultat et partagez-le sur Instagram.");
+                              alert("Impossible de copier le résultat.");
                             }
-                          }}
-                          className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 px-5 py-3 text-sm font-semibold text-white transition hover:brightness-95" 
-                        >
-                          Instagram
-                        </button>
-
-                        <button
-                          type="button"
-                          onClick={async () => {
-                            const text = `🎯 Je viens de tester mon niveau d'anglais avec Yves Kabuya !\n🇬🇧 Mon niveau : ${resultLevel}\n\nTestez gratuitement votre niveau 👇\nYves-Kabuya`;
-
-                            try {
-                              await navigator.clipboard.writeText(text);
-                              alert("Résultat copié ! Vous pouvez maintenant le partager sur TikTok." );
-                            } catch {
-                              alert("Copiez votre résultat et partagez-le sur TikTok.");
-                            }
-                          }}
-                          className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 px-5 py-3 text-sm font-semibold text-white transition hover:brightness-95" 
-                        >
-                          TikTok
-                        </button>
+                           }}
+                           className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-5 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
+                         >
+                            Copier le résultat
+                         </button>
 
                       </div>
 
